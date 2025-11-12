@@ -62,14 +62,14 @@
 
 .hero-subtitle {
   font-size: clamp(1.25rem, 3vw, 1.75rem);
-  color: #ffffff;
+  color: #6b7280;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .hero-description {
   font-size: 1.125rem;
-  color: #ffffff;
+  color: #6b7280;
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
