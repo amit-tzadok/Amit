@@ -1,5 +1,10 @@
 .about {
-  background: var(--bg-secondary);
+  /* soft pink gradient background for the About section */
+  background: linear-gradient(135deg, #fff6fb 0%, #ffe6f2 35%, #ffd1e8 70%, #ffc0de 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* keep a subtle inner padding so content reads well on top of the gradient */
+  padding: 2.5rem 0;
 }
 
 .about-content {
@@ -14,12 +19,36 @@
   position: relative;
 }
 
+.about-image {
+  /* ensure overlay is clipped to image shape */
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 20px;
+}
+
 .about-image img {
   width: 100%;
   max-width: 400px;
   border-radius: 20px;
   box-shadow: var(--shadow-xl);
   transition: var(--transition);
+}
+
+/* soft pink tint overlay on the profile image */
+.about-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,105,180,0.18), rgba(255,182,193,0.10));
+  mix-blend-mode: overlay;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+  border-radius: 20px;
+}
+
+.about-image:hover::after {
+  opacity: 0.95;
 }
 
 .about-image img:hover {
@@ -74,7 +103,8 @@
 
 .skill-icon {
   font-size: 2.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  /* pink gradient rather than purple */
+  background: linear-gradient(135deg, #ff6fbf 0%, #ffb3d8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

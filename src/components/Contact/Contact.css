@@ -77,7 +77,8 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  /* Pink focus shadow */
+  box-shadow: 0 0 0 3px rgba(255, 111, 191, 0.15);
 }
 
 .form-group textarea {
