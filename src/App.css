@@ -1,0 +1,9 @@
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+.App > *:not(.floating-flowers) {
+  position: relative;
+  z-index: 2;
+}
