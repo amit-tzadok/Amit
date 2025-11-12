@@ -33,7 +33,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="about-image">
-            <img src="/assets/images/profile.png" alt="Amit - Profile" />
+            <img src={import.meta.env.BASE_URL + 'assets/images/profile.png'} alt="Amit - Profile" />
           </div>
 
           <div className="about-text">
