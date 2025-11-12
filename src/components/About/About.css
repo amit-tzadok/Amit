@@ -7,6 +7,11 @@
   padding: 2.5rem 0;
 }
 
+body.dark-mode .about {
+  /* Dark mode: deep pink/purple gradient matching hero */
+  background: linear-gradient(135deg, #1a0c14 0%, #2d1520 35%, #3d1a2b 70%, #4b1e37 100%);
+}
+
 .about-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
