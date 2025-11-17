@@ -12,7 +12,7 @@ export const projectsData = [
     title: 'LDR',
     description: 'A shared long-distance relationship web app made for me and my boyfriend to stay connected through shared tasks, date planning, and more.',
     image: import.meta.env.BASE_URL + 'assets/images/project2.jpg',
-    tags: ['JavaScript', 'Web', 'Demo'],
+    tags: ['JavaScript', 'Web'],
     liveLink: 'https://amit-tzadok.github.io/LDR/',
     githubLink: 'https://github.com/amit-tzadok/LDR'
   }
