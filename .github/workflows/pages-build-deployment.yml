@@ -1,8 +1,8 @@
 name: pages-build-deployment
 
 on:
-  push:
-    branches: [ main ]
+  # Disabled automatic push trigger to avoid Pages environment protection rejections
+  # Use manual dispatch to run this workflow when you intentionally want to deploy
   workflow_dispatch:
 
 permissions:
