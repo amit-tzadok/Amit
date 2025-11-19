@@ -66,6 +66,14 @@ const About = () => {
                 ))}
               </div>
             </div>
+
+            <div className="interests">
+              <h4>Interests</h4>
+              <p>
+                Outside of computer science, I love music, art (drawing, painting, and crafting), working out,
+                trying new foods, traveling, and learning new languages.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
