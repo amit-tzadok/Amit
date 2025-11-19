@@ -111,14 +111,6 @@ const About = () => {
                       <motion.div
                         key={index}
                         className="skill-item"
-                        initial={{ opacity: 0, scale: 0.5, rotateY: 90 }}
-                        animate={inView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
-                        transition={{ 
-                          duration: 0.5, 
-                          delay: 0.7 + (catIndex * 4 + index) * 0.08,
-                          type: "spring",
-                          stiffness: 200
-                        }}
                         whileHover={{ 
                           scale: 1.1, 
                           rotate: [0, -5, 5, 0],
