@@ -70,7 +70,7 @@ const Hero = () => {
             <a href="#projects" className="btn btn-primary">
               View My Work
             </a>
-            <a href="/resume.pdf" download className="btn btn-secondary">
+            <a href={import.meta.env.BASE_URL + 'assets/images/resume.pdf'} download className="btn btn-secondary">
               Download Resume
             </a>
             <a href="#contact" className="btn btn-secondary">
