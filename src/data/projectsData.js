@@ -10,7 +10,7 @@ export const projectsData = [
   ,
   {
     title: 'Our Space',
-    description: 'A shared long-distance relationship web app made for me and my boyfriend to stay connected through shared interests, tasks, date planning, and more.',
+    description: 'A shared long-distance relationship and friendship web app that helped me keep in touch and connect with people post-graduation through shared interests, tasks, date planning, and more.',
     image: import.meta.env.BASE_URL + 'assets/images/project2.png',
     tags: ['JavaScript', 'Web'],
     liveLink: 'https://ldr-app-923ac.web.app',
