@@ -88,7 +88,7 @@ export function About() {
             </span>
             <span className="inline-block relative">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                AI / ML Enthusiast
+                  AI / ML Enthusiast
               </span>
               <motion.div
                 className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"
@@ -111,9 +111,7 @@ export function About() {
           >
             <div className="space-y-8">
               <div>
-                <h3 className="mb-6 text-slate-900 text-3xl">
-                  Recently graduated from <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">University at Buffalo</span>
-                </h3>
+                
                 
                 <p className="mb-4 text-slate-600 leading-relaxed text-lg">
                   I graduated in May 2025 with a B.S. in Computer Science and a minor in Mathematics. 
@@ -128,7 +126,7 @@ export function About() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2">
+              {/* <div className="flex flex-wrap gap-2">
                 {['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'React', 'Node.js', 'HTML5', 'CSS3', 'NumPy', 'Pandas', 'scikit-learn', 'PyTorch', 'Git', 'GitHub', 'Jupyter', 'Linux'].map((skill, index) => (
                   <motion.span
                     key={index}
@@ -142,7 +140,7 @@ export function About() {
                     {skill}
                   </motion.span>
                 ))}
-              </div>
+              </div> */}
 
               <motion.div
                 className="relative p-6 rounded-2xl overflow-hidden"
@@ -177,27 +175,16 @@ export function About() {
                 <ImageWithFallback 
                   src={`${import.meta.env.BASE_URL}assets/images/profile.png`}
                   alt="Amit - Profile"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/15 to-purple-600/15 mix-blend-overlay"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/15 to-purple-600/15 mix-blend-overlay"></div> */}
               </motion.div>
 
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500/25 to-purple-500/25 rounded-3xl -z-10 blur-sm" />
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full -z-10 blur-2xl" />
 
-              {/* Info badge */}
-              <motion.div
-                className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm px-5 py-4 rounded-2xl shadow-xl border border-slate-100"
-                initial={{ opacity: 0, scale: 0.85 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-              >
-                <div className="text-xs text-slate-500 uppercase tracking-wider mb-0.5 font-medium">Graduated</div>
-                <div className="font-bold text-slate-900 text-base">May 2025</div>
-                <div className="text-xs text-slate-500">University at Buffalo</div>
-              </motion.div>
+            
             </div>
           </motion.div>
         </div>

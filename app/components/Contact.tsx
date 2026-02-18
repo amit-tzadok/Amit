@@ -158,7 +158,7 @@ export function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-slate-500 transition-all"
-                    placeholder="John Doe"
+                    placeholder="RJ Green"
                   />
                 </div>
 
@@ -174,7 +174,7 @@ export function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-slate-500 transition-all"
-                    placeholder="john@example.com"
+                    placeholder="rj@example.com"
                   />
                 </div>
 
@@ -220,10 +220,10 @@ export function Contact() {
           className="mt-20 pt-8 border-t border-white/10 text-center"
         >
           <p className="text-slate-400">
-            © 2025 Amit Tzadok. Crafted with passion using React & Tailwind CSS.
+            © 2025 Amit Tzadok. 
           </p>
           <p className="text-slate-500 text-sm mt-2">
-            Let's build the future together, one line of code at a time.
+            Built with React and Tailwind CSS.
           </p>
         </motion.div>
       </div>

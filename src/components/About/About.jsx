@@ -1,10 +1,5 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import {
-  FaJava, FaJs, FaHtml5, FaCss3Alt, FaReact, FaNode, FaDatabase,
-  FaGitAlt, FaGithub, FaLinux, FaTerminal
-} from 'react-icons/fa'
-import { SiTypescript, SiPython, SiNumpy, SiPandas, SiScikitlearn, SiPytorch, SiJupyter } from 'react-icons/si'
 import './About.css'
 
 const About = () => {
@@ -12,46 +7,6 @@ const About = () => {
     triggerOnce: true,
     threshold: 0.1
   })
-
-  const skillCategories = [
-    {
-      category: 'Programming Languages',
-      skills: [
-        { icon: <SiPython />, name: 'Python' },
-        { icon: <SiTypescript />, name: 'TypeScript' },
-        { icon: <FaJava />, name: 'Java' },
-        { icon: <FaJs />, name: 'JavaScript' },
-        { icon: <FaDatabase />, name: 'SQL' }
-      ]
-    },
-    {
-      category: 'ML & Data Science',
-      skills: [
-        { icon: <SiNumpy />, name: 'NumPy' },
-        { icon: <SiPandas />, name: 'Pandas' },
-        { icon: <SiScikitlearn />, name: 'scikit-learn' },
-        { icon: <SiPytorch />, name: 'PyTorch' }
-      ]
-    },
-    {
-      category: 'Web Development',
-      skills: [
-        { icon: <FaReact />, name: 'React' },
-        { icon: <FaNode />, name: 'Node.js' },
-        { icon: <FaHtml5 />, name: 'HTML5' },
-        { icon: <FaCss3Alt />, name: 'CSS3' }
-      ]
-    },
-    {
-      category: 'Tools & Platforms',
-      skills: [
-        { icon: <FaGitAlt />, name: 'Git' },
-        { icon: <FaGithub />, name: 'GitHub' },
-        { icon: <SiJupyter />, name: 'Jupyter' },
-        { icon: <FaLinux />, name: 'Linux' }
-      ]
-    }
-  ]
 
   return (
     <section id="about" className="about">
@@ -96,36 +51,6 @@ const About = () => {
           </div>
 
           <div className="about-details">
-            <motion.div 
-              className="skills"
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <h4>Skills & Technologies</h4>
-              {skillCategories.map((category, catIndex) => (
-                <div key={catIndex} className="skill-category">
-                  <h5 className="category-title">{category.category}</h5>
-                  <div className="skills-grid">
-                    {category.skills.map((skill, index) => (
-                      <motion.div
-                        key={index}
-                        className="skill-item"
-                        whileHover={{ 
-                          scale: 1.1, 
-                          rotate: [0, -5, 5, 0],
-                          transition: { duration: 0.3 }
-                        }}
-                      >
-                        <div className="skill-icon">{skill.icon}</div>
-                        <span>{skill.name}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-
             <motion.div 
               className="interests"
               initial={{ opacity: 0, y: 30 }}

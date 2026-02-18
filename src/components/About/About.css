@@ -47,7 +47,7 @@ body.dark-mode .about {
 
 .about-image img {
   width: 100%;
-  max-width: 300px;
+  max-width: 220px;
   border-radius: 20px;
   box-shadow: var(--shadow-xl);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,25 +55,8 @@ body.dark-mode .about {
 }
 
 .about-image:hover img {
-  transform: scale(1.05) rotateY(5deg);
-  box-shadow: 0 20px 40px rgba(255, 111, 145, 0.25);
-}
-
-/* Coral and aqua tint overlay */
-.about-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(135deg, rgba(255, 111, 145, 0.12), rgba(127, 219, 218, 0.08));
-  mix-blend-mode: overlay;
-  opacity: 1;
-  transition: opacity 0.4s ease;
-  border-radius: 20px;
-}
-
-.about-image:hover::after {
-  opacity: 0.85;
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .about-text h3 {
