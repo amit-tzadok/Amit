@@ -17,6 +17,6 @@
     "noFallthroughCasesInSwitch": true,
     "allowJs": true
   },
-  "include": ["src", "app"],
+  "include": ["src", "app", "vite-env.d.ts"],
   "exclude": ["node_modules", "dist", "app/components/ui"]
 }

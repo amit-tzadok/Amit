@@ -1,6 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Award, Coffee, Heart, Zap, Terminal, Sparkles } from 'lucide-react';
+import { Award, Coffee, Heart, Zap, Sparkles } from 'lucide-react';
 import { useRef } from 'react';
 
 export function About() {
@@ -13,10 +13,10 @@ export function About() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   const stats = [
-    { icon: Zap, value: '50+', label: 'Projects Completed', color: 'from-yellow-400 to-orange-500' },
-    { icon: Award, value: '5+', label: 'Years Experience', color: 'from-blue-400 to-cyan-500' },
-    { icon: Coffee, value: '1000+', label: 'Cups of Coffee', color: 'from-amber-600 to-yellow-700' },
-    { icon: Heart, value: '100%', label: 'Client Satisfaction', color: 'from-pink-500 to-rose-600' },
+    { icon: Award, value: 'B.S.', label: 'Computer Science', color: 'from-blue-400 to-cyan-500' },
+    { icon: Zap, value: 'UB', label: 'University at Buffalo', color: 'from-yellow-400 to-orange-500' },
+    { icon: Coffee, value: 'May 2025', label: 'Graduated', color: 'from-amber-600 to-yellow-700' },
+    { icon: Heart, value: 'Minor', label: 'Mathematics', color: 'from-pink-500 to-rose-600' },
   ];
 
   return (
@@ -88,12 +88,12 @@ export function About() {
             className="mb-6"
           >
             <span className="inline-block bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent">
-              Creating Digital
+              Hello! I'm Amit
             </span>
             <br />
             <span className="inline-block relative">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Magic
+                CS Graduate · AI & ML Enthusiast
               </span>
               <motion.div
                 className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"
@@ -117,23 +117,24 @@ export function About() {
             <div className="space-y-8">
               <div>
                 <h3 className="mb-6 text-slate-900 text-3xl">
-                  Transforming ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">reality</span>
+                  Recently graduated from <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">University at Buffalo</span>
                 </h3>
                 
                 <p className="mb-4 text-slate-600 leading-relaxed text-lg">
-                  I'm a multidisciplinary creative developer who thrives at the intersection of design and code. 
-                  With a passion for innovation and a meticulous eye for detail, I craft digital experiences 
-                  that don't just work—they inspire.
+                  I graduated in May 2025 with a B.S. in Computer Science and a minor in Mathematics. 
+                  I'm passionate about AI and machine learning, with a strong foundation in problem-solving 
+                  and algorithm design.
                 </p>
                 
                 <p className="mb-6 text-slate-600 leading-relaxed text-lg">
-                  Every project is an opportunity to push boundaries, challenge conventions, and create 
-                  something extraordinary. I believe great design is invisible, but its impact is undeniable.
+                  I love building innovative solutions that leverage cutting-edge technologies. Currently seeking 
+                  opportunities to apply my skills in software development, machine learning, and data-driven 
+                  problem solving to create meaningful impact.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {['React', 'TypeScript', 'Node.js', 'UI/UX', 'WebGL', '3D', 'Animation'].map((skill, index) => (
+                {['TypeScript', 'JavaScript', 'Java', 'SQL', 'React', 'Node.js', 'HTML5', 'CSS3', 'NumPy', 'Pandas', 'scikit-learn', 'PyTorch', 'Git', 'GitHub', 'Jupyter', 'Linux'].map((skill, index) => (
                   <motion.span
                     key={index}
                     className="relative px-5 py-2.5 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full text-sm text-slate-700 font-medium border border-purple-100 overflow-hidden group cursor-pointer"
@@ -163,10 +164,10 @@ export function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 opacity-90"></div>
                 <div className="relative z-10 flex items-center gap-4 text-white">
-                  <Terminal className="w-8 h-8" />
+                  <Heart className="w-8 h-8" />
                   <div>
-                    <div className="font-semibold text-lg">Currently Building</div>
-                    <div className="text-white/80">Next-gen web experiences with AI integration</div>
+                    <div className="font-semibold text-lg">Interests</div>
+                    <div className="text-white/80">Music, drawing, painting, crafting, photography—and always excited to try new foods, explore new places, and learn new languages.</div>
                   </div>
                 </div>
               </motion.div>
@@ -188,8 +189,8 @@ export function About() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzcxMzM1ODk1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Workspace"
+                  src={`${import.meta.env.BASE_URL}assets/images/profile.png`}
+                  alt="Amit - Profile"
                   className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 to-purple-600/40 mix-blend-overlay"></div>
