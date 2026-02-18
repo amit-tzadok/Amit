@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { 
-  FaJava, FaJs, FaHtml5, FaCss3Alt, FaReact, FaNode, FaDatabase, 
+import {
+  FaJava, FaJs, FaHtml5, FaCss3Alt, FaReact, FaNode, FaDatabase,
   FaGitAlt, FaGithub, FaLinux, FaTerminal
 } from 'react-icons/fa'
-import { SiTypescript, SiNumpy, SiPandas, SiScikitlearn, SiPytorch, SiJupyter } from 'react-icons/si'
+import { SiTypescript, SiPython, SiNumpy, SiPandas, SiScikitlearn, SiPytorch, SiJupyter } from 'react-icons/si'
 import './About.css'
 
 const About = () => {
@@ -17,10 +17,10 @@ const About = () => {
     {
       category: 'Programming Languages',
       skills: [
+        { icon: <SiPython />, name: 'Python' },
         { icon: <SiTypescript />, name: 'TypeScript' },
         { icon: <FaJava />, name: 'Java' },
         { icon: <FaJs />, name: 'JavaScript' },
-        { icon: <SiTypescript />, name: 'TypeScript' },
         { icon: <FaDatabase />, name: 'SQL' }
       ]
     },

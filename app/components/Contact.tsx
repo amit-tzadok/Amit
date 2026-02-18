@@ -74,21 +74,21 @@ export function Contact() {
                 {
                   icon: Mail,
                   label: 'Email',
-                  value: 'your.email@example.com',
-                  href: 'mailto:your.email@example.com',
+                  value: 'amit.tzadok@gmail.com',
+                  href: 'mailto:amit.tzadok@gmail.com',
                   color: 'from-blue-500 to-cyan-500'
                 },
                 {
                   icon: Phone,
                   label: 'Phone',
-                  value: '+1 (234) 567-890',
-                  href: 'tel:+1234567890',
+                  value: '+1 (914) 208-1937',
+                  href: 'tel:9142081937',
                   color: 'from-purple-500 to-pink-500'
                 },
                 {
                   icon: MapPin,
                   label: 'Location',
-                  value: 'San Francisco, CA',
+                  value: 'Mount Kisco, New York, USA',
                   href: '#',
                   color: 'from-orange-500 to-red-500'
                 },
@@ -128,9 +128,9 @@ export function Contact() {
               transition={{ delay: 0.4 }}
               className="mt-8 p-6 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-2xl border border-purple-500/20 backdrop-blur-sm"
             >
-              <h4 className="mb-2 text-white">Available for Freelance</h4>
+              <h4 className="mb-2 text-white">Open to Opportunities</h4>
               <p className="text-sm text-slate-300">
-                Currently accepting select freelance projects. Let's discuss how we can work together!
+                Actively seeking full-time roles in software development, machine learning, and data-driven problem solving.
               </p>
             </motion.div>
           </motion.div>
@@ -219,7 +219,7 @@ export function Contact() {
           className="mt-20 pt-8 border-t border-white/10 text-center"
         >
           <p className="text-slate-400">
-            © 2026 Your Name. Crafted with passion and ❤️ using React & Tailwind CSS.
+            © 2025 Amit Tzadok. Crafted with passion using React & Tailwind CSS.
           </p>
           <p className="text-slate-500 text-sm mt-2">
             Let's build the future together, one line of code at a time.

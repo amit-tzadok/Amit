@@ -1,49 +1,35 @@
-import { Code2, Palette, Database, Smartphone, Globe, Zap, Layers, Sparkles } from 'lucide-react';
+import { Code2, Globe, Zap, Layers, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useState } from 'react';
 
 const skills = [
   {
     icon: Code2,
-    title: 'Frontend Development',
-    description: 'React, TypeScript, Next.js, Tailwind CSS',
+    title: 'Programming Languages',
+    description: 'Python, TypeScript, Java, JavaScript, SQL',
     color: 'from-blue-500 to-cyan-500',
-    progress: 95
-  },
-  {
-    icon: Database,
-    title: 'Backend Development',
-    description: 'Node.js, Python, PostgreSQL, MongoDB',
-    color: 'from-purple-500 to-pink-500',
-    progress: 90
-  },
-  {
-    icon: Palette,
-    title: 'UI/UX Design',
-    description: 'Figma, Adobe XD, Responsive Design',
-    color: 'from-orange-500 to-red-500',
-    progress: 88
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile Development',
-    description: 'React Native, PWAs, Mobile-First',
-    color: 'from-green-500 to-emerald-500',
     progress: 85
   },
   {
-    icon: Globe,
-    title: 'Web Technologies',
-    description: 'REST APIs, GraphQL, WebSockets',
-    color: 'from-indigo-500 to-blue-500',
-    progress: 92
+    icon: Zap,
+    title: 'ML & Data Science',
+    description: 'NumPy, Pandas, scikit-learn, PyTorch',
+    color: 'from-purple-500 to-pink-500',
+    progress: 80
   },
   {
-    icon: Zap,
-    title: 'Performance',
-    description: 'Optimization, SEO, Accessibility',
-    color: 'from-yellow-500 to-orange-500',
-    progress: 87
+    icon: Globe,
+    title: 'Web Development',
+    description: 'React, Node.js, HTML5, CSS3',
+    color: 'from-orange-500 to-red-500',
+    progress: 85
+  },
+  {
+    icon: Layers,
+    title: 'Tools & Platforms',
+    description: 'Git, GitHub, Jupyter, Linux',
+    color: 'from-green-500 to-emerald-500',
+    progress: 82
   }
 ];
 
@@ -149,7 +135,7 @@ export function Skills() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            A powerful arsenal of modern technologies and frameworks, refined through years of hands-on experience
+            A solid foundation in AI/ML and software development, built through coursework, research, and hands-on projects
           </motion.p>
         </motion.div>
 
