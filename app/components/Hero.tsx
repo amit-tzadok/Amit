@@ -142,7 +142,7 @@ export function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               <span className="relative z-10 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-black">
-                YOUR NAME
+                Amit Tzadok
               </span>
               <motion.div
                 className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur-3xl opacity-30"
@@ -161,14 +161,14 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="space-y-2"
           >
-            {["Creative", "Developer", "&", "Digital", "Artist"].map((word, i) => (
+            {["CS", "Graduate", "&", "AI", "Enthusiast"].map((word, i) => (
               <motion.span
                 key={i}
                 className={`inline-block mx-3 text-2xl md:text-4xl ${
                   word === "&" ? "text-purple-400" : "text-slate-400"
                 }`}
-                whileHover={{ 
-                  scale: 1.2, 
+                whileHover={{
+                  scale: 1.2,
                   color: "#a78bfa",
                   rotate: Math.random() * 10 - 5
                 }}
@@ -186,10 +186,10 @@ export function Hero() {
           transition={{ delay: 0.8 }}
           className="mb-12 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
         >
-          Crafting{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">immersive</span> digital experiences that blend{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">art</span>,{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">technology</span>, and human-centered design
+          Recent graduate from the{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">University at Buffalo</span>{" "}passionate about{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">AI</span>{" "}and{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">machine learning</span>, seeking opportunities to create meaningful impact
         </motion.p>
 
         <motion.div
@@ -199,7 +199,8 @@ export function Hero() {
           className="flex flex-wrap gap-4 justify-center mb-16"
         >
           <motion.a
-            href="#contact"
+            href={`${import.meta.env.BASE_URL}assets/images/resume.pdf`}
+            download
             className="group relative px-10 py-5 rounded-full overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -211,7 +212,7 @@ export function Hero() {
               whileHover={{ x: 0 }}
               transition={{ duration: 0.3 }}
             ></motion.div>
-            <span className="relative z-10 text-white font-medium">Start a Project</span>
+            <span className="relative z-10 text-white font-medium">Download Resume</span>
           </motion.a>
           
           <motion.a
@@ -237,9 +238,9 @@ export function Hero() {
           className="flex gap-4 justify-center"
         >
           {[
-            { icon: Github, href: 'https://github.com', label: 'GitHub', color: 'from-slate-500 to-slate-700' },
-            { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: 'from-blue-500 to-blue-700' },
-            { icon: Mail, href: 'mailto:your.email@example.com', label: 'Email', color: 'from-purple-500 to-pink-500' },
+            { icon: Github, href: 'https://github.com/amit-tzadok', label: 'GitHub', color: 'from-slate-500 to-slate-700' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/amit-tzadok/', label: 'LinkedIn', color: 'from-blue-500 to-blue-700' },
+            { icon: Mail, href: 'mailto:amit.tzadok@gmail.com', label: 'Email', color: 'from-purple-500 to-pink-500' },
           ].map((social, index) => {
             const Icon = social.icon;
             return (
