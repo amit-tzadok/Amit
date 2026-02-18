@@ -13,10 +13,10 @@ export function About() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   const stats = [
-    { icon: Award, value: 'B.S.', label: 'Computer Science', color: 'from-blue-400 to-cyan-500' },
-    { icon: Zap, value: 'UB', label: 'University at Buffalo', color: 'from-yellow-400 to-orange-500' },
-    { icon: Coffee, value: 'May 2025', label: 'Graduated', color: 'from-amber-600 to-yellow-700' },
-    { icon: Heart, value: 'Minor', label: 'Mathematics', color: 'from-pink-500 to-rose-600' },
+    { icon: Award, value: 'B.S. CS', label: 'University at Buffalo', color: 'from-blue-400 to-cyan-500' },
+    { icon: Zap, value: 'AI / ML', label: 'Specialization', color: 'from-violet-500 to-purple-600' },
+    { icon: Coffee, value: '2025', label: 'Class of', color: 'from-amber-500 to-orange-500' },
+    { icon: Heart, value: 'Math', label: 'Minor', color: 'from-pink-500 to-rose-600' },
   ];
 
   return (
@@ -63,17 +63,13 @@ export function About() {
           className="text-center mb-20"
         >
           <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="inline-block mb-6"
           >
             <div className="relative">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-xl opacity-50"
-                animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-                transition={{ duration: 8, repeat: Infinity }}
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-xl opacity-20" />
               <div className="relative px-6 py-3 bg-white border-2 border-purple-200 rounded-full">
                 <Sparkles className="w-5 h-5 text-purple-600 inline mr-2" />
                 <span className="text-purple-600 font-medium">About Me</span>
@@ -88,12 +84,11 @@ export function About() {
             className="mb-6"
           >
             <span className="inline-block bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent">
-              Hello! I'm Amit
+              CS Graduate &amp;{' '}
             </span>
-            <br />
             <span className="inline-block relative">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                CS Graduate · AI & ML Enthusiast
+                AI / ML Enthusiast
               </span>
               <motion.div
                 className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full"
@@ -133,27 +128,18 @@ export function About() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                {['TypeScript', 'JavaScript', 'Java', 'SQL', 'React', 'Node.js', 'HTML5', 'CSS3', 'NumPy', 'Pandas', 'scikit-learn', 'PyTorch', 'Git', 'GitHub', 'Jupyter', 'Linux'].map((skill, index) => (
+              <div className="flex flex-wrap gap-2">
+                {['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'React', 'Node.js', 'HTML5', 'CSS3', 'NumPy', 'Pandas', 'scikit-learn', 'PyTorch', 'Git', 'GitHub', 'Jupyter', 'Linux'].map((skill, index) => (
                   <motion.span
                     key={index}
-                    className="relative px-5 py-2.5 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full text-sm text-slate-700 font-medium border border-purple-100 overflow-hidden group cursor-pointer"
-                    initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    className="px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full text-sm text-slate-700 font-medium border border-purple-100"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, type: "spring" }}
-                    whileHover={{ scale: 1.1, y: -5 }}
+                    transition={{ delay: index * 0.04, duration: 0.3 }}
+                    whileHover={{ scale: 1.05, y: -2 }}
                   >
-                    <span className="relative z-10">{skill}</span>
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"
-                      initial={{ x: "-100%" }}
-                    />
-                    <motion.span
-                      className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity z-20"
-                    >
-                      {skill}
-                    </motion.span>
+                    {skill}
                   </motion.span>
                 ))}
               </div>
@@ -193,33 +179,24 @@ export function About() {
                   alt="Amit - Profile"
                   className="w-full h-[600px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 to-purple-600/40 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/15 to-purple-600/15 mix-blend-overlay"></div>
               </motion.div>
 
               {/* Decorative elements */}
-              <motion.div
-                className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl -z-10"
-                animate={{ rotate: [0, 90, 0] }}
-                transition={{ duration: 20, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full -z-10 blur-2xl opacity-50"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500/25 to-purple-500/25 rounded-3xl -z-10 blur-sm" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full -z-10 blur-2xl" />
 
-              {/* Floating badge */}
+              {/* Info badge */}
               <motion.div
-                className="absolute -bottom-8 -right-8 bg-white p-8 rounded-3xl shadow-2xl"
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
+                className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm px-5 py-4 rounded-2xl shadow-xl border border-slate-100"
+                initial={{ opacity: 0, scale: 0.85 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                whileHover={{ rotate: 12, scale: 1.1 }}
               >
-                <div className="text-6xl mb-2">🚀</div>
-                <div className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Always</div>
-                <div className="font-bold text-xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Learning</div>
+                <div className="text-xs text-slate-500 uppercase tracking-wider mb-0.5 font-medium">Graduated</div>
+                <div className="font-bold text-slate-900 text-base">May 2025</div>
+                <div className="text-xs text-slate-500">University at Buffalo</div>
               </motion.div>
             </div>
           </motion.div>
