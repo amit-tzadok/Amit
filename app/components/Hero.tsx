@@ -32,7 +32,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black px-6">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black px-6 pt-20">
       {/* Dynamic gradient background that follows mouse */}
       <motion.div
         className="absolute inset-0"
@@ -41,30 +41,22 @@ export function Hero() {
         }}
       />
 
-      {/* Animated geometric shapes */}
+      {/* Subtle background blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(15)].map((_, i) => (
+        {[
+          { w: 400, h: 400, left: '10%', top: '20%', color: 'bg-blue-500/5' },
+          { w: 350, h: 350, left: '70%', top: '60%', color: 'bg-purple-500/5' },
+          { w: 300, h: 300, left: '50%', top: '10%', color: 'bg-pink-500/5' },
+          { w: 450, h: 450, left: '20%', top: '70%', color: 'bg-indigo-500/5' },
+        ].map((blob, i) => (
           <motion.div
             key={i}
-            className="absolute"
-            style={{
-              width: Math.random() * 300 + 100,
-              height: Math.random() * 300 + 100,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              rotate: [0, 360],
-              scale: [1, 1.2, 1],
-              opacity: [0.05, 0.15, 0.05],
-            }}
-            transition={{
-              duration: Math.random() * 20 + 10,
-              repeat: Infinity,
-              ease: "linear"
-            }}
+            className="absolute rounded-full blur-3xl"
+            style={{ width: blob.w, height: blob.h, left: blob.left, top: blob.top }}
+            animate={{ scale: [1, 1.08, 1] }}
+            transition={{ duration: 12 + i * 3, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className={`w-full h-full ${i % 3 === 0 ? 'bg-blue-500/10' : i % 3 === 1 ? 'bg-purple-500/10' : 'bg-pink-500/10'} ${i % 2 === 0 ? 'rounded-full' : 'rounded-3xl rotate-45'} blur-2xl`}></div>
+            <div className={`w-full h-full ${blob.color} rounded-full`}></div>
           </motion.div>
         ))}
       </div>
@@ -79,117 +71,59 @@ export function Hero() {
       }}></div>
 
       <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto text-center w-full">
-        {/* Floating particles */}
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            initial={{ 
-              x: (i * windowSize.width) / 20, 
-              y: (i * windowSize.height) / 20 
-            }}
-            animate={{
-              y: [null, -100],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, type: "spring" }}
           className="mb-8"
         >
-          <motion.div
-            className="inline-flex items-center gap-2 px-5 py-2 mb-8 relative"
-            animate={{
-              boxShadow: [
-                "0 0 20px rgba(99, 102, 241, 0.3)",
-                "0 0 40px rgba(168, 85, 247, 0.4)",
-                "0 0 20px rgba(236, 72, 153, 0.3)",
-                "0 0 40px rgba(99, 102, 241, 0.4)",
-              ]
-            }}
-            transition={{ duration: 4, repeat: Infinity }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full blur-xl opacity-50"></div>
+          <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 relative">
             <div className="relative px-4 py-2 bg-black/50 backdrop-blur-xl rounded-full border border-white/20">
               <Sparkles className="w-4 h-4 text-yellow-400 inline mr-2" />
               <span className="text-sm text-white">Open to Opportunities</span>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Animated text with letter-by-letter reveal */}
-          <motion.h1 className="mb-8 text-7xl md:text-9xl leading-none">
+          <motion.h1 className="mb-6 leading-none">
             <motion.div
-              initial={{ y: 100, opacity: 0 }}
+              initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-white/20 mb-2"
+              transition={{ delay: 0.2, duration: 0.7 }}
+              className="text-white/50 text-xl md:text-2xl font-light tracking-widest uppercase mb-3"
             >
               Hello, I'm
             </motion.div>
             <motion.div
               className="relative inline-block"
-              initial={{ y: 100, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
+              transition={{ delay: 0.35, duration: 0.8 }}
             >
-              <span className="relative z-10 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-black">
+              <span className="relative z-10 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-black text-6xl md:text-8xl">
                 Amit Tzadok
               </span>
-              <motion.div
-                className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur-3xl opacity-30"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0],
-                }}
-                transition={{ duration: 5, repeat: Infinity }}
-              ></motion.div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur-3xl opacity-20"></div>
             </motion.div>
           </motion.h1>
-          
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="space-y-2"
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-slate-400 text-xl md:text-2xl font-light tracking-wide mb-2"
           >
-            {["CS", "Graduate", "&", "AI", "Enthusiast"].map((word, i) => (
-              <motion.span
-                key={i}
-                className={`inline-block mx-3 text-2xl md:text-4xl ${
-                  word === "&" ? "text-purple-400" : "text-slate-400"
-                }`}
-                whileHover={{
-                  scale: 1.2,
-                  color: "#a78bfa",
-                  rotate: Math.random() * 10 - 5
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </motion.div>
+            B.S. Computer Science &nbsp;&middot;&nbsp; AI &amp; Machine Learning
+          </motion.p>
         </motion.div>
         
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="mb-12 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
+          className="mb-12 text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed"
         >
-          Recent graduate from the{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">University at Buffalo</span>{" "}passionate about{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">AI</span>{" "}and{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">machine learning</span>, seeking opportunities to create meaningful impact
+          Recent graduate from the University at Buffalo passionate about AI and machine learning,
+          seeking opportunities to create meaningful impact through software and data-driven solutions.
         </motion.p>
 
         <motion.div
@@ -201,7 +135,7 @@ export function Hero() {
           <motion.a
             href={`${import.meta.env.BASE_URL}assets/images/resume.pdf`}
             download
-            className="group relative px-10 py-5 rounded-full overflow-hidden"
+            className="group relative px-8 py-4 rounded-full overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -214,14 +148,14 @@ export function Hero() {
             ></motion.div>
             <span className="relative z-10 text-white font-medium">Download Resume</span>
           </motion.a>
-          
+
           <motion.a
-            href="#projects"
-            className="px-10 py-5 rounded-full border-2 border-white/20 text-white backdrop-blur-sm hover:bg-white/10 transition-all relative overflow-hidden group"
+            href="#contact"
+            className="px-8 py-4 rounded-full border border-white/20 text-white backdrop-blur-sm hover:bg-white/10 transition-all relative overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="relative z-10">Explore Work</span>
+            <span className="relative z-10">Get In Touch</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"
               initial={{ x: "-100%" }}
@@ -251,9 +185,9 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="relative w-14 h-14 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white group overflow-hidden"
                 aria-label={social.label}
-                whileHover={{ y: -8, rotate: 360 }}
+                whileHover={{ y: -5, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 <Icon className="w-5 h-5 relative z-10" />
                 <motion.div
