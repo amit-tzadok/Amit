@@ -5,34 +5,24 @@ import { useState, useRef } from 'react';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with cart management, payment integration, and real-time inventory tracking.',
-    image: 'https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NzEzMDIxMTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'ML Visualizer',
+    description: 'An interactive machine learning visualizer for exploring and understanding ML algorithms with real-time visualizations.',
+    image: `${import.meta.env.BASE_URL}assets/images/project1.jpg`,
+    tags: ['TypeScript', 'JavaScript', 'CSS', 'Machine Learning', 'Visualization'],
+    github: 'https://github.com/amit-tzadok/ml_visualizer',
+    demo: 'https://amit-tzadok.github.io/ml_visualizer/',
     featured: true,
     color: 'from-blue-500 to-cyan-500'
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative project management tool with real-time updates, team collaboration, and advanced analytics.',
-    image: 'https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGNvZGluZyUyMHByb2plY3R8ZW58MXx8fHwxNzcxMjk2NjYzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['TypeScript', 'Next.js', 'PostgreSQL', 'WebSocket'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Our Space',
+    description: 'A shared long-distance relationship and friendship web app that helped me keep in touch and connect with people post-graduation through shared interests, tasks, date/hangout planning, and more.',
+    image: `${import.meta.env.BASE_URL}assets/images/project2.png`,
+    tags: ['JavaScript', 'Web'],
+    github: 'https://github.com/amit-tzadok/Our-Space',
+    demo: 'https://ldr-app-923ac.web.app',
     featured: true,
     color: 'from-purple-500 to-pink-500'
-  },
-  {
-    title: 'Weather Dashboard',
-    description: 'Beautiful weather application with detailed forecasts, interactive maps, and location tracking.',
-    image: 'https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzcxMzM1ODk1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['React', 'API Integration', 'Charts', 'Tailwind'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    featured: false,
-    color: 'from-orange-500 to-red-500'
   }
 ];
 
@@ -354,8 +344,7 @@ export function Projects() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Innovative solutions and creative implementations across various domains, 
-            showcasing the intersection of design and technology
+            Here are some of my recent works
           </motion.p>
         </motion.div>
 
@@ -374,7 +363,7 @@ export function Projects() {
           className="text-center"
         >
           <motion.a
-            href="https://github.com"
+            href="https://github.com/amit-tzadok"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white rounded-full font-medium shadow-2xl relative overflow-hidden group"
