@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa'
 import './Contact.css'
 
 const Contact = () => {
@@ -34,21 +34,8 @@ const Contact = () => {
     e.preventDefault()
     setFormStatus({ submitted: false, submitting: true, error: false })
 
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus({ submitted: true, submitting: false, error: false })
-      setFormData({ name: '', email: '', subject: '', message: '' })
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setFormStatus({ submitted: false, submitting: false, error: false })
-      }, 5000)
-    }, 1500)
-
-    // Uncomment and modify for actual form submission
-    /*
     try {
-      const response = await fetch('YOUR_API_ENDPOINT', {
+      const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -57,13 +44,15 @@ const Contact = () => {
       if (response.ok) {
         setFormStatus({ submitted: true, submitting: false, error: false })
         setFormData({ name: '', email: '', subject: '', message: '' })
+        setTimeout(() => {
+          setFormStatus({ submitted: false, submitting: false, error: false })
+        }, 5000)
       } else {
         setFormStatus({ submitted: false, submitting: false, error: true })
       }
-    } catch (error) {
+    } catch {
       setFormStatus({ submitted: false, submitting: false, error: true })
     }
-    */
   }
 
   return (
@@ -92,11 +81,21 @@ const Contact = () => {
 
             <div className="contact-item">
               <div className="contact-icon">
-                <FaPhone />
+                <FaLinkedin />
               </div>
               <div>
-                <h4>Phone</h4>
-                <a href="tel:9142081937">+1 (914) 208-1937</a>
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/amit-tzadok/" target="_blank" rel="noopener noreferrer">amit-tzadok</a>
+              </div>
+            </div>
+
+            <div className="contact-item">
+              <div className="contact-icon">
+                <FaGithub />
+              </div>
+              <div>
+                <h4>GitHub</h4>
+                <a href="https://github.com/amit-tzadok" target="_blank" rel="noopener noreferrer">amit-tzadok</a>
               </div>
             </div>
 

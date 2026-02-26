@@ -1,33 +1,39 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import './FloatingFlowers.css'
 
 const FloatingFlowers = () => {
   const [isHomeVisible, setIsHomeVisible] = useState(true)
 
   useEffect(() => {
+    let ticking = false
     const handleScroll = () => {
-      const heroSection = document.getElementById('home')
-      if (heroSection) {
-        const rect = heroSection.getBoundingClientRect()
-        // Show flakes only when hero section is visible
-        setIsHomeVisible(rect.bottom > 0 && rect.top < window.innerHeight)
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const heroSection = document.getElementById('home')
+          if (heroSection) {
+            const rect = heroSection.getBoundingClientRect()
+            setIsHomeVisible(rect.bottom > 0 && rect.top < window.innerHeight)
+          }
+          ticking = false
+        })
+        ticking = true
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll() // Check initial state
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+  const particles = useMemo(() => Array.from({ length: 20 }, (_, i) => ({
     id: i,
-    size: Math.random() * 8 + 4, // Reduced size range
+    size: Math.random() * 8 + 4,
     delay: Math.random() * 5,
-    duration: Math.random() * 10 + 15, // Faster animations
+    duration: Math.random() * 10 + 15,
     left: Math.random() * 100,
-    animationType: i % 3 // vary animation types for more natural movement
-  }))
+    animationType: i % 3
+  })), [])
 
   if (!isHomeVisible) return null
 
