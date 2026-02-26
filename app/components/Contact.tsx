@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone, Send, MessageSquare } from 'lucide-react';
 import { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export function Contact() {
   const [formData, setFormData] = useState({
