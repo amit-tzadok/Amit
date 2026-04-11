@@ -30,9 +30,9 @@ const Education = () => {
         <motion.div
           ref={ref}
           className="education-card"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
         >
           <div className="education-header">
             <div className="education-icon">
@@ -41,9 +41,9 @@ const Education = () => {
 
             <div className="education-info">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -10 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.25, delay: 0.1 }}
               >
                 <h3>University at Buffalo</h3>
                 <p className="education-school">State University of New York</p>
@@ -51,9 +51,9 @@ const Education = () => {
 
               <motion.div
                 className="education-degree"
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -10 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.25, delay: 0.15 }}
               >
                 <span className="degree-badge">B.S. Computer Science</span>
                 <span className="minor-badge">Minor in Mathematics</span>
@@ -64,7 +64,7 @@ const Education = () => {
               className="education-date"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.25, delay: 0.2 }}
             >
               <Calendar size={16} />
               <span>Aug 2021 – May 2025</span>
@@ -73,9 +73,9 @@ const Education = () => {
 
           <motion.div
             className="education-coursework"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.25, delay: 0.25 }}
           >
             <div className="coursework-header">
               <BookOpen size={18} />
@@ -86,9 +86,9 @@ const Education = () => {
                 <motion.span
                   key={course}
                   className="course-tag"
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.6 + idx * 0.04 }}
+                  transition={{ duration: 0.15, delay: 0.3 + idx * 0.02 }}
                 >
                   {course}
                 </motion.span>

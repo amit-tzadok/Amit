@@ -58,25 +58,25 @@ const About = () => {
         <motion.div
           ref={ref}
           className="about-content"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
         >
           <div className="about-intro">
             <motion.div
               className="about-image"
-              initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-              animate={inView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
               <img src={import.meta.env.BASE_URL + 'assets/images/profile.png'} alt="Amit - Profile" />
             </motion.div>
 
             <motion.div
               className="about-text"
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 15 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.4 }}
+              transition={{ duration: 0.3, delay: 0.15 }}
             >
               <h3>Hello! I'm Amit</h3>
               <p>
@@ -96,9 +96,9 @@ const About = () => {
             <motion.div
               ref={skillsRef}
               className="skills"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={skillsInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
             >
               <h4>Skills</h4>
               {skillCategories.map((category, catIdx) => (
@@ -109,9 +109,9 @@ const About = () => {
                       <motion.div
                         className="skill-item"
                         key={skill.name}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={skillsInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.4, delay: 0.1 + catIdx * 0.1 + skillIdx * 0.05 }}
+                        transition={{ duration: 0.2, delay: catIdx * 0.05 + skillIdx * 0.03 }}
                       >
                         <div className="skill-icon">{skill.icon}</div>
                         <span>{skill.name}</span>
@@ -124,9 +124,9 @@ const About = () => {
 
             <motion.div
               className="interests"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1.2 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
             >
               <h4>Interests</h4>
               <p>

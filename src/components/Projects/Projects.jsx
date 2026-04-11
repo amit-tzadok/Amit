@@ -24,10 +24,10 @@ const Projects = () => {
             <motion.div
               key={index}
               className="project-card"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3, delay: index * 0.07 }}
+              whileHover={{ y: -5 }}
             >
               <div className="project-image">
                 <img src={project.image} alt={project.title} />

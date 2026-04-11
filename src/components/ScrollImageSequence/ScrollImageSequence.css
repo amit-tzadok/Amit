@@ -1,0 +1,130 @@
+/* ─── Outer scrollable viewport ─────────────────────────────────────── */
+.sseq-container {
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+  overscroll-behavior: contain;   /* prevent scroll from bleeding to window */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.25) transparent;
+}
+
+.sseq-container::-webkit-scrollbar {
+  width: 6px;
+}
+.sseq-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sseq-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 3px;
+}
+
+/* ─── Tall scroll track ──────────────────────────────────────────────── */
+.sseq-track {
+  position: relative;
+}
+
+/* ─── Sticky frame panel ─────────────────────────────────────────────── */
+.sseq-sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ─── Frame image ────────────────────────────────────────────────────── */
+.sseq-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+.sseq-image--visible {
+  opacity: 1;
+}
+
+/* ─── Loading overlay ────────────────────────────────────────────────── */
+.sseq-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  background: #111;
+  z-index: 2;
+}
+
+.sseq-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  animation: sseq-spin 0.8s linear infinite;
+}
+
+@keyframes sseq-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── HUD (progress bar + counter) ──────────────────────────────────── */
+.sseq-hud {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.12);
+  z-index: 3;
+}
+
+.sseq-progress-bar {
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  transition: width 0.05s linear;
+}
+
+.sseq-counter {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 0.7rem;
+  font-family: monospace;
+  color: rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ─── Empty state ────────────────────────────────────────────────────── */
+.sseq-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border: 2px dashed rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.sseq-empty code {
+  background: rgba(255,255,255,0.1);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}

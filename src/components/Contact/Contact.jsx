@@ -64,9 +64,9 @@ const Contact = () => {
         <motion.div
           ref={ref}
           className="contact-content"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
         >
           <div className="contact-info">
             <div className="contact-item">

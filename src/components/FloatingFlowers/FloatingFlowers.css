@@ -13,11 +13,9 @@
   position: absolute;
   top: 0;
   border-radius: 50%;
-  /* White snowflake effect */
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   opacity: 0.85;
-  will-change: transform, opacity;
+  will-change: transform;
 }
 
 /* Three different flake animation patterns for variety */
@@ -94,9 +92,7 @@
 }
 
 body.dark-mode .particle {
-  /* White flakes with subtle glow for dark mode */
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.45));
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 768px) {
