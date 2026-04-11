@@ -3,15 +3,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.97);
   box-shadow: var(--shadow-sm);
   z-index: 1000;
-  transition: var(--transition);
+  transition: box-shadow 0.3s ease;
 }
 
 body.dark-mode .navbar {
-  background-color: rgba(17, 24, 39, 0.95);
+  background-color: rgba(17, 24, 39, 0.98);
 }
 
 .navbar.scrolled {
@@ -45,7 +44,7 @@ body.dark-mode .navbar {
   color: var(--text-secondary);
   position: relative;
   padding: 0.5rem 0;
-  transition: var(--transition);
+  transition: color 0.2s ease;
 }
 
 .nav-link::after {
@@ -87,7 +86,7 @@ body.dark-mode .navbar {
   justify-content: center;
   color: var(--text-secondary);
   font-size: 1.25rem;
-  transition: var(--transition);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .theme-toggle:hover {

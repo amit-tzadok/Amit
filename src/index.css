@@ -74,7 +74,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
-  transition: var(--transition);
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 ul {
@@ -127,7 +127,7 @@ section {
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
   border: 2px solid transparent;
   display: inline-block;
 }
